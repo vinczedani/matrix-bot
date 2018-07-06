@@ -3,10 +3,12 @@ const Fastify = require('fastify');
 const config = require('./config');
 
 function buildFastify () {
+  const logger = config.env === 'test' ? false : {
+    level: config.loglevel,
+  };
+
   const fastify = Fastify({
-    logger: {
-      level: config.loglevel,
-    },
+    logger,
   });
 
   fastify.get('/ping', function (request, reply) {

@@ -1,0 +1,39 @@
+{
+  "name": "matrix-bot",
+  "version": "0.0.1",
+  "description": "It is a bot for matrix chat.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app",
+    "lint": "eslint app/**",
+    "unit_test": "NODE_ENV=test tap test/*.js",
+    "test": "npm run lint && npm run unit_test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinczedani/matrix-bot.git"
+  },
+  "keywords": [
+    "matrix",
+    "chat",
+    "bot"
+  ],
+  "author": "Daniel Vincze",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinczedani/matrix-bot/issues"
+  },
+  "homepage": "https://github.com/vinczedani/matrix-bot#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "convict": "^4.3.1",
+    "dotenv": "^6.0.0",
+    "fastify": "^1.7.0",
+    "matrix-js-sdk": "^0.10.5"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-plugin-jsx-a11y": "^6.1.0",
+    "tap": "^12.0.1"
+  }
+}
